@@ -146,7 +146,7 @@ socket.on('GameOver', function(data){
     document.getElementById('answer3').style.display = "none";
     document.getElementById('answer4').style.display = "none";
     document.getElementById('timerText').innerHTML = "";
-    document.getElementById('question').innerHTML = "GAME OVER";
+    document.getElementById('question').innerHTML = "Juego Terminado";
     document.getElementById('playersAnswered').innerHTML = "";
     
     
