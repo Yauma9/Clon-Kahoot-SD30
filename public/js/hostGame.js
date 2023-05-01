@@ -1,21 +1,22 @@
 var socket = io();
 
-var params = jQuery.deparam(window.location.search); //Gets the id from url
+var params = jQuery.deparam(window.location.search); //Consigue el ID del URL
 
 var timer;
 
-var time = 20;
+var time = 60;
 
-//When host connects to server
+//Cuando el host se conecte al server
 socket.on('connect', function() {
     
-    //Tell server that it is host connection from game view
+    //Decirle al servidor que es el host desde la vista del juego
     socket.emit('host-join-game', params);
 });
 
+//Redirecciona al usuario a la pantalla de 'unirse a juego'
 socket.on('noGameFound', function(){
-   window.location.href = '../../';//Redirect user to 'join game' page
-});
+    window.location.href = '../../';
+ });
 
 socket.on('gameQuestions', function(data){
     document.getElementById('question').innerHTML = data.q1;
@@ -24,12 +25,12 @@ socket.on('gameQuestions', function(data){
     document.getElementById('answer3').innerHTML = data.a3;
     document.getElementById('answer4').innerHTML = data.a4;
     var correctAnswer = data.correct;
-    document.getElementById('playersAnswered').innerHTML = "Players Answered 0 / " + data.playersInGame;
+    document.getElementById('playersAnswered').innerHTML = "Jugadores que han contestado 0 / " + data.playersInGame;
     updateTimer();
 });
 
 socket.on('updatePlayersAnswered', function(data){
-   document.getElementById('playersAnswered').innerHTML = "Players Answered " + data.playersAnswered + " / " + data.playersInGame; 
+   document.getElementById('playersAnswered').innerHTML = "Jugadores que han contestado " + data.playersAnswered + " / " + data.playersInGame; 
 });
 
 socket.on('questionOver', function(playerData, correct){
@@ -39,11 +40,12 @@ socket.on('questionOver', function(playerData, correct){
     var answer3 = 0;
     var answer4 = 0;
     var total = 0;
-    //Hide elements on page
+
+    //Ocultar elementos en página
     document.getElementById('playersAnswered').style.display = "none";
     document.getElementById('timerText').style.display = "none";
     
-    //Shows user correct answer with effects on elements
+    //Mostrar al usuario la respuesta correcta con efectos en pantalla
     if(correct == 1){
         document.getElementById('answer2').style.filter = "grayscale(50%)";
         document.getElementById('answer3').style.filter = "grayscale(50%)";
@@ -83,7 +85,7 @@ socket.on('questionOver', function(playerData, correct){
         total += 1;
     }
     
-    //Gets values for graph
+    //Conseguir valores para la gráfica
     answer1 = answer1 / total * 100;
     answer2 = answer2 / total * 100;
     answer3 = answer3 / total * 100;
@@ -118,7 +120,8 @@ function nextQuestion(){
     document.getElementById('playersAnswered').style.display = "block";
     document.getElementById('timerText').style.display = "block";
     document.getElementById('num').innerHTML = " 20";
-    socket.emit('nextQuestion'); //Tell server to start new question
+    socket.emit('nextQuestion'); 
+    //Decirle al servidor que haga nueva pregunta 
 }
 
 function updateTimer(){

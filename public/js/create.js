@@ -1,7 +1,8 @@
 var socket = io();
 
+//Conseguir los nombres de la base de datos para mostrar al usuario
 socket.on('connect', function(){
-    socket.emit('requestDbNames');//Get database names to display to user
+    socket.emit('requestDbNames');
 });
 
 socket.on('gameNamesData', function(data){

@@ -1,12 +1,12 @@
 var socket = io();
 var params = jQuery.deparam(window.location.search);
 
-//When host connects to server
+//Cuando el host conecta al servidor
 socket.on('connect', function() {
 
     document.getElementById('players').value = "";
     
-    //Tell server that it is host connection
+    //Decirle al server que es la conexión host
     socket.emit('host-join', params);
 });
 
@@ -14,7 +14,7 @@ socket.on('showGamePin', function(data){
    document.getElementById('gamePinText').innerHTML = data.pin;
 });
 
-//Adds player's name to screen and updates player count
+//Agrega el nombre del jugador a la pantalla y lo añade a la lista
 socket.on('updatePlayerLobby', function(data){
     
     document.getElementById('players').value = "";
@@ -25,7 +25,7 @@ socket.on('updatePlayerLobby', function(data){
     
 });
 
-//Tell server to start game if button is clicked
+//Decirle al server que empiece el juego
 function startGame(){
     socket.emit('startGame');
 }
@@ -33,13 +33,13 @@ function endGame(){
     window.location.href = "/";
 }
 
-//When server starts the game
+//Cuando el servidor empieza el juego
 socket.on('gameStarted', function(id){
     console.log('Game Started!');
     window.location.href="/host/game/" + "?id=" + id;
 });
 
+//Redirecciona al usuario a la pantalla de 'unirse a juego'
 socket.on('noGameFound', function(){
-   window.location.href = '../../';//Redirect user to 'join game' page
+   window.location.href = '../../';
 });
-

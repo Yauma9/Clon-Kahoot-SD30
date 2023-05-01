@@ -1,24 +1,26 @@
 var socket = io();
 
-//When player connects to server
+//Cuando el jugador se conecta al servidor
 socket.on('connect', function() {
     
-    var params = jQuery.deparam(window.location.search); //Gets data from url
+    var params = jQuery.deparam(window.location.search); 
+    //Consigue información de la URL
     
-    //Tell server that it is player connection
+    //Le dice al servidor que es una conexión de jugador
     socket.emit('player-join', params);
 });
 
-//Boot player back to join screen if game pin has no match
+//Regresa al jugador a la pantalla de unirse a un juego si el PIN no existe
 socket.on('noGameFound', function(){
     window.location.href = '../';
 });
-//If the host disconnects, then the player is booted to main screen
+
+//Si el host se desconecta, el jugador es regresado a la pantalla de inicio
 socket.on('hostDisconnect', function(){
     window.location.href = '../';
 });
 
-//When the host clicks start game, the player screen changes
+//Cuando el host inicia el juego, la pantalla del jugador cambia
 socket.on('gameStartedPlayer', function(){
     window.location.href="/player/game/" + "?id=" + socket.id;
 });

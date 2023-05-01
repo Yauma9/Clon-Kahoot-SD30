@@ -1,5 +1,5 @@
 var socket = io();
-var questionNum = 1; //Starts at two because question 1 is already present
+var questionNum = 1; //Empieza en el dos porque la pregunta 1 ya está presente
 
 function updateDatabase(){
     var questions = [];
@@ -44,16 +44,16 @@ function addQuestion(){
     var correctLabel = document.createElement('label');
     var correctField = document.createElement('input');
     
-    questionLabel.innerHTML = "Question " + String(questionNum) + ": ";
+    questionLabel.innerHTML = "Pregunta " + String(questionNum) + ": ";
     questionField.setAttribute('class', 'question');
     questionField.setAttribute('id', 'q' + String(questionNum));
     questionField.setAttribute('type', 'text');
     
-    answer1Label.innerHTML = "Answer 1: ";
-    answer2Label.innerHTML = " Answer 2: ";
-    answer3Label.innerHTML = "Answer 3: ";
-    answer4Label.innerHTML = " Answer 4: ";
-    correctLabel.innerHTML = "Correct Answer (1-4): ";
+    answer1Label.innerHTML = "Respuesta 1: ";
+    answer2Label.innerHTML = " Respuesta 2: ";
+    answer3Label.innerHTML = "Respuesta 3: ";
+    answer4Label.innerHTML = " Respuesta 4: ";
+    correctLabel.innerHTML = "Respuesta correcta: (1-4): ";
     
     answer1Field.setAttribute('id', String(questionNum) + "a1");
     answer1Field.setAttribute('type', 'text');
@@ -66,7 +66,7 @@ function addQuestion(){
     correctField.setAttribute('id', 'correct' + String(questionNum));
     correctField.setAttribute('type', 'number');
     
-    newQuestionDiv.setAttribute('id', 'question-field');//Sets class of div
+    newQuestionDiv.setAttribute('id', 'question-field');//Establece la clase de Div
     
     newQuestionDiv.appendChild(questionLabel);
     newQuestionDiv.appendChild(questionField);
@@ -87,15 +87,17 @@ function addQuestion(){
     newQuestionDiv.appendChild(correctLabel);
     newQuestionDiv.appendChild(correctField);
     
-    questionsDiv.appendChild(document.createElement('br'));//Creates a break between each question
-    questionsDiv.appendChild(newQuestionDiv);//Adds the question div to the screen
+    questionsDiv.appendChild(document.createElement('br'));
+    //Crea un break entre cada pregunta
+    questionsDiv.appendChild(newQuestionDiv);
+    //Agrega el div de las preguntas a la pantalla
     
     newQuestionDiv.style.backgroundColor = randomColor();
 }
 
-//Called when user wants to exit quiz creator
+//Llamado cuando el usuario se quiere salir del creador de quizes
 function cancelQuiz(){
-    if (confirm("Are you sure you want to exit? All work will be DELETED!")) {
+    if (confirm("Seguro que quieres salir? Todo el progreso será eliminado!")) {
         window.location.href = "../";
     }
 }
