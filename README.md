@@ -1,16 +1,17 @@
 # kahoot-clone-nodejs
-<h3>INSTRUCTIONS:</h3>
+<h3>Instrucciones:</h3>
 <ol>
-  <li>Install MongoDB: 'Sudo apt-get install mongodb'</li>
-  <li>Start MongoDB: 'Sudo service mongodb start'</li>
-  <li>Make sure all node modules have been installed listed in package.json: express, moment, mongodb, mongoose, socket.io</li>
-  <li>Start Server: nodejs server/server.js</li>
+  <li>Instalar MongoDB 4.0.28(https://www.mongodb.com/try/download/community)</li>
+  <li>Iniciar MongoDB: 'mongod'</li>
+  <li>Asegurate de instalar todas los paquetes que están listados en el package.json: express, moment, mongodb, mongoose, socket.io</li>
+  <li>Iniciar servidor: node server/server.js </li>
+  <li>O si tienes nodemon: npm start </li>
 </ol>
 <br>
-<h3>Description</h3>
-<h5>This project is a kahoot clone that uses nodejs and mongodb</h5>
-<h5>Multiple games can be ongoing at one time and works with many players per game</h5>
-<h3>Screen Shots:</h3>
+<h3>Descripción:</h3>
+<h5>Este es un clon de Kahoot utilizando nodejs y mongoDB</h5>
+<h5>Multiples juegos pueden funcionar a la vez y pueden tener varios jugadores</h5>
+<h3>Screenshots:</h3>
 <img src="Screenshots/join.png" height="200" width="auto" alt="Player Join"/>
 <img src="Screenshots/hostJoin.png" height="200" width="auto" alt="Host Lobby"/>
 <img src="Screenshots/player.png" height="200" width="auto" alt="Player"/>
