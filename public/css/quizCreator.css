@@ -1,22 +1,55 @@
 #question-field{
-    border-style: groove;
-    border-width: 1px;
-    padding: 10px;
-    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    background-color: #2363ac;
 }
 .question{
-    width: 400px;
-    font-family: 'Raleway', sans-serif;
+    width: 300px;
+    font-family: 'poppins', sans-serif;
+    background-color:white;
+    border: 2px solid rgb(83, 83, 82);
+    border-radius: 3px;
+    text-align: center;
+    
 }
 .correct{
-    width: 50px;
+    width: 300px;
+    font-family: 'poppins', sans-serif;
+    background-color:white;
+    border: 2px solid rgb(83, 83, 82);
+    border-radius: 3px;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+
 }
 #title{
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #2363ac;
 }
 #quizTitle{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
+    
 }

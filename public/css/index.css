@@ -1,90 +1,179 @@
-@keyframes bgcolor {
-    0% {
-        background-color: #45a3e5
-    }
-
-    30% {
-        background-color: #66bf39
-    }
-
-    60% {
-        background-color: #eb670f
-    }
-
-    90% {
-        background-color: #f35
-    }
-
-    100% {
-        background-color: #864cbf
-    }
-}
-
-body {
-    -webkit-animation: bgcolor 20s infinite;
-    animation: bgcolor 10s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
 }
 #title{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     text-align: center;
-    font-size: 50px;
-    color: white;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
 }
-#name{
-    width: 50%;
-    padding: 12px 0px;
-    margin: 8px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 20px;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    
+    background-color: rgb(101, 149, 238);
+    background-position: center;
+    background-size: cover;
+    
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: black;
+    border: 6px solid rgb(243, 250, 143);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h2{
+    font-size: 2em;
+    color: #fff;
     text-align: center;
 }
-#pin{
-    width: 50%;
-    padding: 12px 0px;
-    margin: 8px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 20px;
-    text-align: center;
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+      text-align: center;
 }
-#label{
-    display: block;
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Raleway', sans-serif;
-    color: white;
+.inputbox label{
+    position: absolute;
+    top: 5%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
 }
-#host{
-    color: white;
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+    
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+.forget label a{
+    color: #fff;
     text-decoration: none;
 }
-#host:hover{
-    text-decoration:underline;
+.forget label a:hover{
+    text-decoration: underline;
 }
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+#host:hover{
+    text-decoration:white;
+}
+
 #joinButton{
-    width: 50%;
+    width: 45%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 4px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     display: block;
     margin-right: auto;
     margin-left: auto;
     font-size: 20px;
-    background-color: #3A3B3A;
-    font-family: 'Raleway', sans-serif;
+    background-color: #a4df58;
+    font-family: 'poppins', sans-serif;
 }
+#label{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+    color: white;
+}
+#pin{
+    width: 60%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+#name{
+    width: 60%;
+    padding: 12px 0px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: center;
+}
+.footer{
+    background-color: transparent;
+    color: #f8f8f8;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 8px;
+
+}
+
+
+

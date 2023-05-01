@@ -3,31 +3,60 @@ button{
     width: 50%; height: 50%; float: left;
 }
 #answer1{
-    background-color: #4CAF50;
+    background-color: #c73b10;
+
+
 }
 #answer2{
-    background-color: #f94a1e;
+    background-color: #c03463;
+
 }
 #answer3{
-    background-color: #3399ff;
+    background-color: #33a3ff;
+
 }
 #answer4{
-    background-color: #ff9933;
+    background-color: #7eff33;
+
 }
 
 #buttons{
     text-align: center;
 }
 #nameText{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
 }
 #scoreText{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
 }
 #message{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     text-align: center;
-    font-size: 35px;
+    font-size: 28px;
 }
