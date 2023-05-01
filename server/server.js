@@ -48,9 +48,9 @@ io.on('connection', (socket) => {
 
                     games.addGame(gamePin, socket.id, false, {playersAnswered: 0, questionLive: false, gameid: data.id, question: 1}); //Creates a game with pin and host id
 
-                    var game = games.getGame(socket.id); //Gets the game data
+                    var game = games.getGame(socket.id); //Obtiene los datos del juego
 
-                    socket.join(game.pin);//The host is joining a room based on the pin
+                    socket.join(game.pin);//El anfitrión se une a una sala según el pin.
 
                     console.log('Game Created with pin:', game.pin); 
 
