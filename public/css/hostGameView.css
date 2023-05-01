@@ -1,33 +1,33 @@
 #answer1{
-    background-color: #4CAF50;
+    background-color: #c73b10;
     margin: auto;
     padding: 30px 20px;
     height: 50%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
 }
 #answer2{
-    background-color: #f94a1e;
+    background-color: #c03463;
     margin: auto;
     padding: 30px 20px;
     height: 50%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
 }
 #answer3{
-    background-color: #3399ff;
+    background-color:  #33a3ff;
     margin: auto;
     padding: 30px 20px;
     height: 50%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
 }
 #answer4{
-    background-color: #ff9933;
+    background-color: #7eff33;
     margin: auto;
     padding: 30px 20px;
     height: 50%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
 }
 .square{
@@ -44,70 +44,189 @@
 }
 
 #square1{
-    background-color: #4CAF50;
+    background-color: #c73b10;
 }
 #square2{
-    background-color: #f94a1e;
+    background-color: #c03463;
 }
 #square3{
-    background-color: #3399ff;
+    background-color: #33a3ff;
 }
 #square4{
-    background-color: #ff9933;
+    background-color: #7eff33;
 }
 
 #nextQButton{
     display: none;
 }
 #question{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: rgb(234, 250, 8);
+    text-align: center;
+    font-size: 50px;
+    width: 50%;
+    padding: 20px 50px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #000000;
 }
 #timerText{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    width: 18%;
+    padding: 1px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
 }
 #num{
-    font-family: 'Tajawal', sans-serif;
-    font-size: 35px;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
 }
 #playersAnswered{
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    width: 18%;
+    padding: 10px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
 }
 #questionNum{
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    width: 18%;
+    padding: 10px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
 }
 
 #winner1{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
     display: none;
 }
 #winner2{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
-    font-size: 22px;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
     display: none;
 }
 #winner3{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 20px;
+    background-color: #333133;
     display: none;
 }
 #winner4{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
     display: none;
 }
 #winner5{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #333133;
     display: none;
 }
 #winnerTitle{
+    font-family: 'poppins', sans-serif;
+    padding: 0px 10px;
+    color: white;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
-    font-size: 35px;
-    color: #3399ff;
+    font-size: 50px;
+    width: 18%;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 20px;
+    background-color: #57c4cc;
     display: none;
 }
