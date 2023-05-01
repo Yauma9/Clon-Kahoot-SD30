@@ -4,8 +4,7 @@
   <li>Instalar MongoDB 4.0.28(https://www.mongodb.com/try/download/community)</li>
   <li>Iniciar MongoDB: 'mongod'</li>
   <li>Asegurate de instalar todas los paquetes que están listados en el package.json: express, moment, mongodb, mongoose, socket.io</li>
-  <li>Iniciar servidor: node server/server.js </li>
-  <li>O si tienes nodemon: npm start </li>
+  <li>Iniciar servidor: 'node server/server.js',  si tienes nodemon: npm start  </li>
 </ol>
 <br>
 <h3>Descripción:</h3>
