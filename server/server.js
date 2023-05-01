@@ -25,7 +25,7 @@ app.use(express.static(publicPath));
 
 // Iniciar servidor en el puerto 3000
 server.listen(3000, () => {
-    console.log("Server started on port 3000");
+    console.log("Servidor Iniciado en el Puerto: 3000");
 });
 
 // Cuando se establece una conexión entre cliente y servidor
@@ -48,11 +48,11 @@ io.on('connection', (socket) => {
 
                     games.addGame(gamePin, socket.id, false, {playersAnswered: 0, questionLive: false, gameid: data.id, question: 1}); //Creates a game with pin and host id
 
-                    var game = games.getGame(socket.id); //Obtiene los datos del juego
+                    var game = games.getGame(socket.id); //Gets the game data
 
-                    socket.join(game.pin);//El anfitrión se une a una sala según el pin.
+                    socket.join(game.pin);//The host is joining a room based on the pin
 
-                    console.log('Game Created with pin:', game.pin); 
+                    console.log('Cuestionairo creado con el PIN:', game.pin); 
 
                     //Enviar el código PIN del juego al host para que lo muestre a los jugadores que se unan
                     socket.emit('showGamePin', {
@@ -127,7 +127,7 @@ io.on('connection', (socket) => {
             //Si la clave es igual a la clave de uno de los juegos
             if(params.pin == games.games[i].pin){
                 
-                console.log('Player connected to game');
+                console.log('Jugador Conectado al Juego');
                 
                 var hostId = games.games[i].hostId; //Obtenemos la ID del host del juego
                 
@@ -175,7 +175,7 @@ io.on('connection', (socket) => {
             //Comprobamos si el anfitrión fue desconectado o enviado a la vista del juego
             if(game.gameLive == false){
                 games.removeGame(socket.id);//Eliminamos el juego de la instancia de la clase Games
-                console.log('Game ended with pin:', game.pin);
+                console.log('Cuestinario Terminado con el PIN:', game.pin);
 
                 var playersToRemove = players.getPlayers(game.hostId); //Obtenemos a todos los jugadores en el juego
 
