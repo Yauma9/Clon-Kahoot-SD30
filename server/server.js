@@ -25,7 +25,7 @@ app.use(express.static(publicPath));
 
 // Iniciar servidor en el puerto 3000
 server.listen(3000, () => {
-    console.log("Servidor Iniciado en el Puerto: 3000");
+    console.log("Servidor iniciado en el puerto: 3000");
 });
 
 // Cuando se establece una conexión entre cliente y servidor
@@ -52,7 +52,7 @@ io.on('connection', (socket) => {
 
                     socket.join(game.pin);//The host is joining a room based on the pin
 
-                    console.log('Cuestionairo creado con el PIN:', game.pin); 
+                    console.log('Juego creado con el PIN:', game.pin); 
 
                     //Enviar el código PIN del juego al host para que lo muestre a los jugadores que se unan
                     socket.emit('showGamePin', {
@@ -127,7 +127,7 @@ io.on('connection', (socket) => {
             //Si la clave es igual a la clave de uno de los juegos
             if(params.pin == games.games[i].pin){
                 
-                console.log('Jugador Conectado al Juego');
+                console.log('Jugador conectado al juego');
                 
                 var hostId = games.games[i].hostId; //Obtenemos la ID del host del juego
                 
@@ -175,7 +175,7 @@ io.on('connection', (socket) => {
             //Comprobamos si el anfitrión fue desconectado o enviado a la vista del juego
             if(game.gameLive == false){
                 games.removeGame(socket.id);//Eliminamos el juego de la instancia de la clase Games
-                console.log('Cuestinario Terminado con el PIN:', game.pin);
+                console.log('Juego con el PIN:', game.pin, 'terminado');
 
                 var playersToRemove = players.getPlayers(game.hostId); //Obtenemos a todos los jugadores en el juego
 
