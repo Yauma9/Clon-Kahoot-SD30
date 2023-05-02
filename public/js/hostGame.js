@@ -125,7 +125,7 @@ function nextQuestion(){
 }
 
 function updateTimer(){
-    time = 20;
+    time = 60;
     timer = setInterval(function(){
         time -= 1;
         document.getElementById('num').textContent = " " + time;
